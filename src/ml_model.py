@@ -1,6 +1,8 @@
 #%%
+#Progetto ML 
 #If you do not have a module, pip nstall
 from tensorflow.keras import models
+
 from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import Embedding
