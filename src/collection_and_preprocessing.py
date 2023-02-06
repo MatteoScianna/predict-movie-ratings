@@ -66,8 +66,8 @@ def remove_non_ascii(string):
     return ''.join(char for char in string if ord(char) < 128)
 
 def remove_outlier_IQR(df):
-    Q1=np.quantile(df,0.15)
-    Q3=np.quantile(df,0.85)
+    Q1=np.quantile(df,0.25)
+    Q3=np.quantile(df,0.75)
     IQR=Q3-Q1
     l = [Q1, Q3, IQR]
     #df_final=df[~((df<(Q1-1.5*IQR)) | (df>(Q3+1.5*IQR)))]
@@ -184,8 +184,8 @@ for key in out_names:
 post = len(dizionariuccio.keys())
 
 print('The total number of movies is:', post,'\nThe total number of outlier was:',pre-post)
-#tot 1054
-#outliers 51
+#tot 1051
+#outliers 54
 
 
 #%% 
